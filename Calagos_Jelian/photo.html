@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelian Website | Photo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <body style="background-color: lightgoldenrodyellow;"></body>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="hobbies.html">HOBBIES</a></li>
+                <li><a href="#" class="active">PHOTO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    <div class="img-gallery">
+        <div class="image"><img src="3.jpg" alt=""></div>
+        <div class="image"><img src="1.jpg" alt=""></div>
+        <div class="image"><img src="5.jpg" alt=""></div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.img-gallery img').forEach(img => {
+            img.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = img.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+</html>
